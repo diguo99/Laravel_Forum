@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section ('head')
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='https://www.recaptcha.net/recaptcha/api.js'></script>
 @endsection
 
 @section('content')
@@ -36,7 +36,7 @@
 
                             <div class="form-group">
                                 <label for="body">Body:</label>
-                                <wysiwyg name="body"></wysiwyg>
+                                <wysiwyg name="body">{{ old('body') }}</wysiwyg>
                             </div>
 
                             <div class="form-group">

@@ -21,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with('channels', $channels);
         });
+        # time localization
+        // \Carbon\Carbon::setLocale('zh');
 
         \Validator::extend('spamfree', 'App\Rules\SpamFree@passes');
     }
@@ -32,8 +34,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->isLocal()) {
-            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
-        }
+        // if ($this->app->isLocal()) {
+        //     $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        // }
     }
 }

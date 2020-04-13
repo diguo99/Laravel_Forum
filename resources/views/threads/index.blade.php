@@ -12,7 +12,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Search
+                        {{ trans('trans.Search') }}
                     </div>
 
                     <div class="panel-body">
@@ -22,7 +22,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-default" type="submit">Search</button>
+                                <button class="btn btn-default" type="submit">{{ trans('trans.Search') }}</button>
                             </div>
                         </form>
                     </div>
@@ -31,7 +31,7 @@
                 @if (count($trending))
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Trending Threads
+                            {{ trans('trans.Trending Threads') }}
                         </div>
 
                         <div class="panel-body">

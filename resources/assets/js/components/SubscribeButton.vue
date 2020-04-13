@@ -1,5 +1,5 @@
 <template>
-    <button :class="classes" @click="subscribe">Subscribe</button>
+    <button :class="classes" @click="subscribe">{{ trans('trans.Subscribe') }}</button>
 </template>
 
 <script>

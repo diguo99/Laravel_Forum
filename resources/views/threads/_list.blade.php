@@ -16,12 +16,14 @@
                     </h4>
 
                     <h5>
-                        Posted By: <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a>
+                        {{trans('trans.Posted By')}} <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a>
+                        <span style="margin-left: 50px">{{trans('trans.Created At')}} {{ $thread->created_at }}</span>
+                        <span style="margin-left: 50px"> {{ $thread->visits }} {{trans('trans.Visits')}}</span>
                     </h5>
                 </div>
 
                 <a href="{{ $thread->path() }}">
-                    {{ $thread->replies_count }} {{ str_plural('reply', $thread->replies_count) }}
+                    {{ $thread->replies_count }} {{ trans('trans.reply') }}
                 </a>
             </div>
         </div>
@@ -29,11 +31,7 @@
         <div class="panel-body">
             <div class="body">{!! $thread->body !!}</div>
         </div>
-
-        <div class="panel-footer">
-            {{ $thread->visits }} Visits
-        </div>
     </div>
 @empty
-    <p>There are no relevant results at this time.</p>
+    <p>{{ trans('trans.There are no relevant results at this time.') }}</p>
 @endforelse
